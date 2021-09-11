@@ -1,7 +1,6 @@
-# JUtils Grid
+# JUtils Grid3D
 
-JUtils Grid is a template for creating extremely simple and easy to use grids in memory.
-Currently only a 3D implementation exists, containing Width, Height, and Depth, and using x,y,z coordinates.
+JUtils Grid3D is a template for creating extremely simple and easy to use 3D grids in memory.
 
 ### Usage
 Example creating a 10x10x10 grid, setting a few points and printing those points again
@@ -16,3 +15,5 @@ std::cout << *grid.get(0, 0, 0); // Print DEREFERENCED variable because grid.get
 std::cout << *grid.get(0, 0, 1);
 std::cout << *grid.get(1, 0, 0);
 ```
+
+Note: If you try to set or get a point that is out of bounds, then it will return a null pointer. Please always check for a null pointer before preforming operations on data pulled from a grid.
