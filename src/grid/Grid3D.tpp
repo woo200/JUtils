@@ -20,7 +20,7 @@ namespace JUtils
         if (z > this->width  || z < 0)
             return 0;
 
-        return &this->grid[(y * this->width + x) + (z * this->depth)];
+        return &this->grid[(y * this->width + x) + (z * this->width * this->height)];
     }
 
     template <class T>
@@ -33,7 +33,7 @@ namespace JUtils
         if (z > this->width  || z < 0)
             return;
 
-        this->grid[(y * this->width + x) + (z * this->depth)] = data;
+        this->grid[(y * this->width + x) + (z * this->width * this->height)] = data;
     }
 
     template <class T>
